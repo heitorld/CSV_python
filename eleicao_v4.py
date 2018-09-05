@@ -71,7 +71,7 @@ for a in QP:
 	while(it > 0):
 		
 		it = it -1
-		out.write(str(a) + "  "+ str(partidos[a][i]))
+		out.write("\n" + str(a) + "  "+ str(partidos[a][i]))
 		print(str(a) + "  "+ str(partidos[a][i]))
 		
 		i=i+1
