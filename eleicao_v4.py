@@ -33,8 +33,8 @@ for partidosKey in partidos.keys():
 	votosPorPartido = 0
 
 
-#print("Dicionario com a quantidade de votos ordenada de forma decrescente")
-#print(partidos)
+print("Dicionario com a quantidade de votos ordenada de forma decrescente")
+print(partidos)
 #time.sleep(5)
 
 print("Dicionario com a quantidade total de votos por partido")
@@ -45,7 +45,6 @@ print("Total de votos: " + str(totalVotos))
 qE = int(totalVotos / 30)
 print("Quociente eleitoral: " + str(qE))
 
-#print("------$$$$$$$$$$$$_--------$$$$$$$")
 totalQP = 0
 QP = {}
 for x in votosPartidos.keys():
@@ -63,7 +62,7 @@ print(QP)
 
 
 ###SUPONDO QUE NAO TENHA VAGA RESIDUAL, OS CANDIDATOS ELEITOS SERIAM:
-
+out = open("eleicao.tsv", "x") 
 it = int(0)
 for a in QP:
 	it = int(QP[a])
@@ -72,7 +71,9 @@ for a in QP:
 	while(it > 0):
 		
 		it = it -1
+		out.write(str(a) + "  "+ str(partidos[a][i]))
 		print(str(a) + "  "+ str(partidos[a][i]))
+		
 		i=i+1
 
 
